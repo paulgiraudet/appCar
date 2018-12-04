@@ -31,12 +31,14 @@ else{
 }
 
 if (isset($_POST['newColor'])) {
-    $color = htmlspecialchars($_POST['color']);
-    $vehicle->hydrate([
-        "color" => $color
-    ]);
-    $updateVehicle = $manager->update($vehicle);
-    header('Location: ?id=' . $vehicle->getId());
+    if (isset($_POST['color']) && !empty($_POST['color'])) {
+        $color = htmlspecialchars($_POST['color']);
+        $vehicle->hydrate([
+            "color" => $color
+            ]);
+            $updateVehicle = $manager->update($vehicle);
+            header('Location: ?id=' . $vehicle->getId());
+        }
 }
 
 include "../views/detailVue.php";
