@@ -20,6 +20,7 @@ function chargerClasse($classname)
 }
 spl_autoload_register('chargerClasse');
 
+
 $db = Database::DB();
 
 $manager = new VehicleManager($db);
