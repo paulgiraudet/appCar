@@ -1,9 +1,5 @@
 <?php
 
-//display detailsVue with specific controller
-//do the modify link
-
-
 declare(strict_types = 1);
 
 // On enregistre notre autoload.
